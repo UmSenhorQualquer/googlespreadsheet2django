@@ -50,6 +50,7 @@ For the template Google spreadsheet it will generates the next files:
 These comments indicate which parts of the code would be replaced when ever you generate a new code based on the spreadsheet. Every code outside these comments would be kept, which means that you can use these files to add extra rules or fields to your application.
 - The static -> js files implement the hide and show rules of the fields vs values.
 
+------------------------------------------------------------------------------
 
 ## The Google spreadsheet format
 
@@ -73,9 +74,13 @@ After you select the option a popup window will ask you for the name of the new 
 
 ![Table name popup](docs/imgs/tablename_popup.png?raw=true "Screen")
 
-After the Ok, a new tab will be generated with the format "Table_#name you gave for the table#".
-On the top of the tab spreadsheet we will configure for which application the tab bellongs to.
+After the Ok, a new tab will be generated with the format "Table_#name you gave for the table#".  
+On the top of the tab spreadsheet we will configure for which application the tab bellongs to in the field <Select an application>. If we click on this field, a dropdown box will be shown with the available applications configured in the tab "Applications".
 
 ![Table header](docs/imgs/table_header.png?raw=true "Screen")
+
+The fields <Table singular label> and <Table plurar label> are the names of the tables that will be used in the Django admin interface.
+
+The field <Data access> allow us to configure which type of access we will have to this table. Check the available options in the image bellow.
 
 ![Table data access](docs/imgs/table_data_access.png?raw=true "Screen")

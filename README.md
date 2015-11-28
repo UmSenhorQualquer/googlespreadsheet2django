@@ -7,7 +7,7 @@ This library uses a Google SpreadSheet to generates django applications.
 - The google spreadsheet works as a function analysis document that can be presented to the database stakeholders. By using the spreadsheet document to generate code the devolper makes sure that is code is according to what was agreed with the stakeholders.
 - One other advantage is that the google spreadsheet document can be edited in colaboration with several users at the same time. Also all the changes are tracked in the document history log.
 
-## How to use:
+## How to use
 
 1. [Create a Django project](https://docs.djangoproject.com/en/1.8/intro/tutorial01/)
 2. Download and install the library googlespreadsheet2django using the command: python setup.py install
@@ -16,7 +16,7 @@ This library uses a Google SpreadSheet to generates django applications.
 5. Open the terminal and move from your current directory to the created django project directory.
 6. Use the command: gsheet2django "<id of the google spreasheet document>" to generate the code of your django applications.
 
-### The result
+#### The generated code result
 
 For the template Google SpreadSheet it will generates the next files:
 

@@ -53,10 +53,11 @@ These comments indicate which parts of the code would be replaced when ever you 
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
 ------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+<br>
+<br>
+<br>
 
 ## The Google spreadsheet format
 
@@ -85,7 +86,7 @@ On the top of the tab spreadsheet we will configure for which application the ta
 
 ![Table header](docs/imgs/table_header.png?raw=true "Screen")
 
-The fields <Table singular label> and <Table plurar label> are the names of the tables that will be used in the Django admin interface.
+The fields \<Table singular label\> and \<Table plurar label\> are the names of the tables that will be used in the Django admin interface.
 
 The field <Data access> allow us to configure which type of access we will have to this table. Check the available options in the image bellow.
 

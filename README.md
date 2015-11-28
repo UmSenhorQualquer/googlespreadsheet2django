@@ -25,13 +25,13 @@ For the template Google SpreadSheet it will generates the next files:
 ├── details  
 │   ├── abstractmodels  
 │   │   ├── Country.py  
-│   │   ├── \_\_init\_\_.py  
+│   │   ├── __init__.py  
 │   │   └── Person.py  
 │   ├── admins  
 │   │   ├── CountryAdmin.py  
-│   │   ├── \_\_init\_\_.py  
+│   │   ├── __init__.py  
 │   │   └── PersonAdmin.py  
-│   ├── \_\_init\_\_.py  
+│   ├── __init__.py  
 │   ├── models.py  
 │   └── admin.py  
 └── static  

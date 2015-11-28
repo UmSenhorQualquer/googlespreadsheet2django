@@ -111,7 +111,7 @@ The field configurations columns details are explained in the table bellow.
 | Database field name                           | SQL column format |        |             |
 | Tab                                           | Free text     	|        |             |
 | Group                                         | Free text     	|        |             |
-| Type of field                                 |               	|        |             |
+| Type of field                                 | Multiple choice   |        |             |
 |                                               | Created by user   |        |             |
 |                                               | Creation date and time |        |             |
 |                                               | Date 				|        |             |
@@ -134,11 +134,11 @@ The field configurations columns details are explained in the table bellow.
 |                                               | Update date and time |        |             |
 |                                               | Updated by user 	|        |             |
 |                                               | Boolean 			|        	|             |
-| Field format                                  |               	|        |             |
-| Possible answers                              | Column "Answer identifier" from the spreadsheet tab "Anwsers"  |        |             |
+| Field format                                  | The field will have "Auto generated" value or a dropdown list depending on selected "Type of field" |        |             |
+| Possible answers                              | The field will be empty or a dropdown field depending on selected "Type of field" |        |             |
 | Mandatory                                     | Yes/No              |        |             |
-| Depends on another field's answer             | Yes/No              |        |             |
-| Show the field when these values are selected | Values separed by ; |        |             |
+| Depends on another field's answer             | Dropdown list with a list of the table fields |        |             |
+| Show the field when these values are selected | Values separed by ";" |        |             |
 | Help label                                    | Free text           |        |             |
 | Visible                                       | Yes/No              |        |             |
 | Show in the list by order                     | Integer             |        |             |

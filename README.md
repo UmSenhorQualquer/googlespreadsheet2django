@@ -64,11 +64,10 @@ These comments indicate which parts of the code would be replaced when ever you 
 
 ![Applications tab](docs/imgs/applications_tab.png?raw=true "Screen")
 
-In the "Applications" tab we will see a column the title "Applications" as in the image bellow. Here we should add in each row the django applications we would like to generate. 
+In the "Applications" tab we will see a column the title "Applications" as in the image below. Here we should add in each row the django applications which we would like to generate.
 
 ![Applications tab](docs/imgs/applications_list.png?raw=true "Screen")
 
-The names should respect the django syntax for applications names, and each application should be added in a new row bellow the column "Applications".
 
 #### Add a new table
 
@@ -76,24 +75,26 @@ To add a new table we should select the option "Database application -> Add new 
 
 ![New table](docs/imgs/new_table.png?raw=true "Screen")
 
-After you select the option a popup window will ask you for the name of the new table.
+After we select the option a popup window will ask you for the name of the new table.
 
 ![Table name popup](docs/imgs/tablename_popup.png?raw=true "Screen")
 
-After the Ok, a new tab will be generated with the format "Table_\<name you gave for the table\>".  
-On the top of the tab spreadsheet we will configure for which application the tab bellongs to in the field \<Select an application\>. If we click on this field, a dropdown box will be shown with the available applications configured in the tab "Applications".
+After the OK, a new tab will be generated with the format "Table_\<name you gave for the table\>".  
+On the top of the tab spreadsheet we will configure which application the table bellongs to in the field \<Select an application\>.
+If we click on this field, a dropdown box will be shown with the applications configured in the tab "Applications".
 
 ![Table header](docs/imgs/table_header.png?raw=true "Screen")
 
-The fields \<Table singular label\> and \<Table plural label\> are the names of the tables that will be used in the django admin interface.
+The fields \<Table singular label\> and \<Table plural label\> are the names of the table that will be used in the django admin interface.
 
-The field \<Data access\> allow us to configure which type of access we will have to this table. Check the available options in the image bellow.
+The field \<Data access\> allow us to configure which type of access we would like to have on this table.
+Check the available options in the image bellow.
 
 ![Table data access](docs/imgs/table_data_access.png?raw=true "Screen")
 
 #### Add fields to the table
 
-By default the table is added with the primary key set.
+By default the table is added with a primary key set.
 
 ![Default fields](docs/imgs/default_fields.png?raw=true "Screen")
 
@@ -101,9 +102,9 @@ To add new fields you should use the option "Database application -> Add new fie
 
 ![New field](docs/imgs/new_field.png?raw=true "Screen")
 
-A new row will appear in the spreadsheet, where you should configure your field properties.
+A new row will appear in the spreadsheet, where you should configure your fields properties.
 
-The field configurations columns details are explained in the table bellow.
+The details of fields configurations columns are explained in the table below.
 
 
 | Column                                        | Value                                     | Description                           |

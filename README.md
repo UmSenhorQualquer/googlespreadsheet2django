@@ -21,6 +21,7 @@ This library uses a Google SpreadSheet to generates django applications.
 
 For the template Google SpreadSheet it will generates the next files:
 
+```sh
 ├── details  
 │   ├── abstractmodels  
 │   │   ├── Country.py  
@@ -38,7 +39,7 @@ For the template Google SpreadSheet it will generates the next files:
         └── models  
             ├── country.js  
             └── person.js  
-
+```
 
 - The abstractmodels and admins folders describes the Models and their visualisation in the admin interface. The files on these folders should not be touched, never!! because they will be replaced everytime you generate a new code based on the SpreadSheet.
 - In the files models.py and admin.py you will see comments like this one:

@@ -53,6 +53,8 @@ These comments indicate which parts of the code would be replaced when ever you 
 
 ## The Google spreadsheet format
 
+#### Applications tab
+
 ![Applications tab](docs/imgs/applications_tab.png?raw=true "Screen")
 
 In the "Applications" tab we will see a column the title "Applications" as in the image bellow. Here we should add in each row the django applications we would like to generate. 
@@ -60,3 +62,20 @@ In the "Applications" tab we will see a column the title "Applications" as in th
 ![Applications tab](docs/imgs/applications_list.png?raw=true "Screen")
 
 The names should respect the django syntax for applications names, and each application should be added in a new row bellow the column "Applications".
+
+#### Add a new table
+
+To add a new table we should select the option "Database application -> Add new table" in the Google spreadsheet main menu, as in the image bellow.
+
+![New table](docs/imgs/new_table.png?raw=true "Screen")
+
+After you select the option a popup window will ask you for the name of the new table.
+
+![Table name popup](docs/imgs/tablename_popup.png?raw=true "Screen")
+
+After the Ok, a new tab will be generated with the format "Table_#name you gave for the table#".
+On the top of the tab spreadsheet we will configure for which application the tab bellongs to.
+
+![Table header](docs/imgs/table_header.png?raw=true "Screen")
+
+![Table data access](docs/imgs/table_data_access.png?raw=true "Screen")

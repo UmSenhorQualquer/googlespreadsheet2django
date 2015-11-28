@@ -104,35 +104,36 @@ A new row will appear in the spreadsheet, where you should configure your field 
 
 The field configurations columns details are explained in the table bellow.
 
+
 | Column                                        | Value    | Description |
 | --------------------------------------------- | ----------------- | ----------- |
 | Field label                                   | Free text         |             |
 | Database field name                           | SQL column format |             |
-| Tab                                           | Free text         |             |
-| Group                                         | Free text         |             |
+| Tab                                           | Free text         | Indicates in which tab the field should be shown. Example: ![Tabs](docs/imgs/django-suit-tabs.png?raw=true "Screen") |
+| Group                                         | Free text         | Indicates in which group the field should be shown. Example: ![Group](docs/imgs/django-suit-group.png?raw=true "Screen") |
 | Type of field                                 | Dropdown list with the next options:   |             |
 |                                               | Created by user   | It generates a read-only field which will store the user that created each a table register. |
 |                                               | Creation date and time |  It generates a read-only field which will store the date and time when the table register was created. |
 |                                               | Date              | ![Date field](docs/imgs/django-suit-date.png?raw=true "Screen") |
 |                                               | Date time         | ![Date time field](docs/imgs/django-suit-datetime.png?raw=true "Screen") |
-|                                               | Decimal number    |             |
+|                                               | Decimal number    | ![Decimal field](docs/imgs/django-suit-decimal.png?raw=true "Screen") |
 |                                               | Decimal numbers range |             |
-|                                               | Drop down list    |             |
-|                                               | Email             |             |
-|                                               | File              |             |
-|                                               | Foreign key       |             |
+|                                               | Dropdown list     | ![Dropdown field](docs/imgs/django-suit-dropdown.png?raw=true "Screen") |
+|                                               | Email             | Like the text field, but validates if the input value respect the email format. |
+|                                               | File              | ![File field](docs/imgs/django-suit-file.png?raw=true "Screen") |
+|                                               | Foreign key       | Like a dropdown list but the values are from a table |
 |                                               | Function          |             |
-|                                               | Integer           |             |
-|                                               | Integers range    |             |
-|                                               | Multiple choice   |             |
-|                                               | Number of identification |             |
+|                                               | Integer           | Like a small text field, but it validates if the value is an integer |
+|                                               | Integers range    | Like the Integer field, but it validates a lower and upper bounds |
+|                                               | Multiple choice   | ![Multiple choice field](docs/imgs/django-suit-multiplechoice.png?raw=true "Screen") |
+|                                               | Number of identification | Read-only field, it works as primary key |
 |                                               | Radio buttons list |             |
 |                                               | Slug              |             |
-|                                               | Small text        |             |
-|                                               | Text              |             |
-|                                               | Update date and time |             |
-|                                               | Updated by user   |             |
-|                                               | Boolean           |             |
+|                                               | Small text        | ![Text field](docs/imgs/django-suit-text.png?raw=true "Screen") |
+|                                               | Text              | Textarea field |
+|                                               | Update date and time | Read-only field. Stores the date time of the register last update |
+|                                               | Updated by user   | Read-only field. Stores the use which made the last update |
+|                                               | Boolean           | ![Boolean field](docs/imgs/django-suit-boolean.png?raw=true "Screen") |
 | Field format                                  | The field will have "Auto generated" value or a dropdown list depending on selected "Type of field" |             |
 | Possible answers                              | The field will be empty or a dropdown field depending on selected "Type of field" |             |
 | Mandatory                                     | Yes/No              |             |
@@ -140,7 +141,7 @@ The field configurations columns details are explained in the table bellow.
 | Show the field when these values are selected | Values separed by ";" |             |
 | Help label                                    | Free text           |             |
 | Visible                                       | Yes/No              |             |
-| Show in the list by order                     | Integer             |             |
+| Show in the list by order                     | Integer             | The name will be constructed by the order of the values of this column |
 | Show filter                                   | Yes/No              |             |
 | Use as search field                           | Yes/No              |             |
 | Use on name                                   | Integer             |             |

@@ -82,7 +82,7 @@ After you select the option a popup window will ask you for the name of the new 
 ![Table name popup](docs/imgs/tablename_popup.png?raw=true "Screen")
 
 After the Ok, a new tab will be generated with the format "Table_\<name you gave for the table\>".  
-On the top of the tab spreadsheet we will configure for which application the tab bellongs to in the field <Select an application>. If we click on this field, a dropdown box will be shown with the available applications configured in the tab "Applications".
+On the top of the tab spreadsheet we will configure for which application the tab bellongs to in the field 	<Select an application\>. If we click on this field, a dropdown box will be shown with the available applications configured in the tab "Applications".
 
 ![Table header](docs/imgs/table_header.png?raw=true "Screen")
 

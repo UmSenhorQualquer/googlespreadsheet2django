@@ -45,7 +45,7 @@ For the template Google spreadsheet it will generates the next files:
 ```python
 ##### auto:start:Person #####
 ... some code ...
-	##### auto:end:Person #####
+    ##### auto:end:Person #####
 ```
 These comments indicate which parts of the code would be replaced when ever you generate a new code based on the spreadsheet. Every code outside these comments would be kept, which means that you can use these files to add extra rules or fields to your application.
 - The static -> js files implement the hide and show rules of the fields vs values.
@@ -104,50 +104,46 @@ A new row will appear in the spreadsheet, where you should configure your field 
 
 The field configurations columns details are explained in the table bellow.
 
-| Column                                        | Type of values    | Effect | Description |
-| --------------------------------------------- |:-----------------:|:------:| ----------- |
-|                                               |                   |        |             |
-| Field label                                   | Free text         |        |             |
-| Database field name                           | SQL column format |        |             |
-| Tab                                           | Free text     	|        |             |
-| Group                                         | Free text     	|        |             |
-| Type of field                                 | Multiple choice   |        |             |
-|                                               | Created by user   |        |             |
-|                                               | Creation date and time |        |             |
-|                                               | Date 				|        |             |
-|                                               | Date time 		|        |             |
-|                                               | Decimal number 	|        |             |
-|                                               | Decimal numbers range |        |             |
-|                                               | Drop down list 	|        |             |
-|                                               | Email 			|        |             |
-|                                               | File 				|        |             |
-|                                               | Foreign key 		|        |             |
-|                                               | Function 			|        |             |
-|                                               | Integer 			|        |             |
-|                                               | Integers range 	|        |             |
-|                                               | Multiple choice 	|        |             |
-|                                               | Number of identification |        |             |
-|                                               | Radio buttons list |        |             |
-|                                               | Slug 				|        |             |
-|                                               | Small text 		|        |             |
-|                                               | Text 				|        |             |
-|                                               | Update date and time |        |             |
-|                                               | Updated by user 	|        |             |
-|                                               | Boolean 			|        	|             |
-| Field format                                  | The field will have "Auto generated" value or a dropdown list depending on selected "Type of field" |        |             |
-| Possible answers                              | The field will be empty or a dropdown field depending on selected "Type of field" |        |             |
-| Mandatory                                     | Yes/No              |        |             |
-| Depends on another field's answer             | Dropdown list with a list of the table fields |        |             |
-| Show the field when these values are selected | Values separed by ";" |        |             |
-| Help label                                    | Free text           |        |             |
-| Visible                                       | Yes/No              |        |             |
-| Show in the list by order                     | Integer             |        |             |
-| Show filter                                   | Yes/No              |        |             |
-| Use as search field                           | Yes/No              |        |             |
-| Use on name                                   | Integer             |        |             |
-| Unique                                        | Yes/No              |        |             |
-| Default value                                 | Free value          |        |             |
-
-
-
-
+| Column                                        | Value    | Description |
+| --------------------------------------------- | ----------------- | ----------- |
+|                                               |                   |             |
+| Field label                                   | Free text         |             |
+| Database field name                           | SQL column format |             |
+| Tab                                           | Free text         |             |
+| Group                                         | Free text         |             |
+| Type of field                                 | Dropdown list with the next options:   |             |
+|                                               | Created by user   |             |
+|                                               | Creation date and time |             |
+|                                               | Date              |             |
+|                                               | Date time         |             |
+|                                               | Decimal number    |             |
+|                                               | Decimal numbers range |             |
+|                                               | Drop down list    |             |
+|                                               | Email             |             |
+|                                               | File              |             |
+|                                               | Foreign key       |             |
+|                                               | Function          |             |
+|                                               | Integer           |             |
+|                                               | Integers range    |             |
+|                                               | Multiple choice   |             |
+|                                               | Number of identification |             |
+|                                               | Radio buttons list |             |
+|                                               | Slug              |             |
+|                                               | Small text        |             |
+|                                               | Text              |             |
+|                                               | Update date and time |             |
+|                                               | Updated by user   |             |
+|                                               | Boolean           |             |
+| Field format                                  | The field will have "Auto generated" value or a dropdown list depending on selected "Type of field" |             |
+| Possible answers                              | The field will be empty or a dropdown field depending on selected "Type of field" |             |
+| Mandatory                                     | Yes/No              |             |
+| Depends on another field's answer             | Dropdown list with a list with the fields of the table |             |
+| Show the field when these values are selected | Values separed by ";" |             |
+| Help label                                    | Free text           |             |
+| Visible                                       | Yes/No              |             |
+| Show in the list by order                     | Integer             |             |
+| Show filter                                   | Yes/No              |             |
+| Use as search field                           | Yes/No              |             |
+| Use on name                                   | Integer             |             |
+| Unique                                        | Yes/No              |             |
+| Default value                                 | Free value          |             |

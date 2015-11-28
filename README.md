@@ -134,7 +134,7 @@ The field configurations columns details are explained in the table bellow.
 |                                               | Update date and time                      | Read-only field. Stores the date time of a record last update. |
 |                                               | Updated by user                           | Read-only field. Stores the user which made the last update. |
 |                                               | Boolean                                   | ![Boolean field](docs/imgs/django-suit-boolean.png?raw=true "Screen") |
-| Field format                                  | The field will have "Auto generated" value or a dropdown list depending on the "Type of field" column value. |             |
+| Field format                                  |  | The field will show "Auto generated" value or a dropdown list depending on the type of the table field.            |
 | Possible answers                              | Empty or a dropdown list. | If the table field is a "Dropdown list" or a "Radio buttons list" a dropdown with the values from the spreadsheet "Answers" tab will be shown. |
 | Mandatory                                     | Yes/No                                    |                                       |
 | Depends on another field's answer             | Dropdown listing the fields of the table. |                          |

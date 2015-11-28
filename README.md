@@ -53,8 +53,6 @@ These comments indicate which parts of the code would be replaced when ever you 
 <br>
 <br>
 <br>
-------------------------------------------------------------------------------
-------------------------------------------------------------------------------
 <br>
 <br>
 <br>
@@ -86,8 +84,70 @@ On the top of the tab spreadsheet we will configure for which application the ta
 
 ![Table header](docs/imgs/table_header.png?raw=true "Screen")
 
-The fields \<Table singular label\> and \<Table plurar label\> are the names of the tables that will be used in the Django admin interface.
+The fields \<Table singular label\> and \<Table plural label\> are the names of the tables that will be used in the Django admin interface.
 
 The field \<Data access\> allow us to configure which type of access we will have to this table. Check the available options in the image bellow.
 
 ![Table data access](docs/imgs/table_data_access.png?raw=true "Screen")
+
+#### Add fields to the table
+
+By default the table is added with the primary key set.
+
+![Default fields](docs/imgs/default_fields.png?raw=true "Screen")
+
+To add new fields you should use the option "Database application -> Add new field" in the Google spreadsheet main menu, as in the image bellow.
+
+![New field](docs/imgs/new_field.png?raw=true "Screen")
+
+A new row will appear in the spreadsheet, where you should configure your field properties.
+
+The field configurations columns details are explained in the table bellow.
+
+| Column                                        | Type of values    | Effect | Description |
+| --------------------------------------------- |:-----------------:|:------:|             |
+|                                               |                   |        |             |
+| Field label                                   | Free text         |        |             |
+| Database field name                           | SQL column format |        |             |
+| Tab                                           | Free text     	|        |             |
+| Group                                         | Free text     	|        |             |
+| Type of field                                 |               	|        |             |
+|                                               | Created by user |        |             |
+|                                               | Creation date and time |        |             |
+|                                               | Date |        |             |
+|                                               | Date time |        |             |
+|                                               | Decimal number |        |             |
+|                                               | Decimal numbers range |        |             |
+|                                               | Drop down list |        |             |
+|                                               | Email |        |             |
+|                                               | File |        |             |
+|                                               | Foreign key |        |             |
+|                                               | Function |        |             |
+|                                               | Integer |        |             |
+|                                               | Integers range |        |             |
+|                                               | Multiple choice |        |             |
+|                                               | Number of identification |        |             |
+|                                               | Radio buttons list |        |             |
+|                                               | Slug |        |             |
+|                                               | Small text |        |             |
+|                                               | Text |        |             |
+|                                               | Update date and time |        |             |
+|                                               | Updated by user |        |             |
+|                                               | Boolean |        |             |
+| Field format                                  |               	|        |             |
+| Possible answers                              | Column "Answer identifier" from the spreadsheet tab "Anwsers"  |        |             |
+| Mandatory                                     | Yes/No              |        |             |
+| Depends on another field's answer             | Yes/No              |        |             |
+| Show the field when these values are selected | Values separed by ; |        |             |
+| Help label                                    | Free text           |        |             |
+| Visible                                       | Yes/No              |        |             |
+| Show in the list by order                     | Integer             |        |             |
+| Show filter                                   | Yes/No              |        |             |
+| Use as search field                           | Yes/No              |        |             |
+| Use on name                                   | Integer             |        |             |
+| Unique                                        | Yes/No              |        |             |
+| Default value                                 | Free value          |        |             |
+
+
+
+

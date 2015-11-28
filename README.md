@@ -105,35 +105,35 @@ A new row will appear in the spreadsheet, where you should configure your field 
 The field configurations columns details are explained in the table bellow.
 
 | Column                                        | Type of values    | Effect | Description |
-| --------------------------------------------- |:-----------------:|:------:|             |
+| --------------------------------------------- |:-----------------:|:------:| ----------- |
 |                                               |                   |        |             |
 | Field label                                   | Free text         |        |             |
 | Database field name                           | SQL column format |        |             |
 | Tab                                           | Free text     	|        |             |
 | Group                                         | Free text     	|        |             |
 | Type of field                                 |               	|        |             |
-|                                               | Created by user |        |             |
+|                                               | Created by user   |        |             |
 |                                               | Creation date and time |        |             |
-|                                               | Date |        |             |
-|                                               | Date time |        |             |
-|                                               | Decimal number |        |             |
+|                                               | Date 				|        |             |
+|                                               | Date time 		|        |             |
+|                                               | Decimal number 	|        |             |
 |                                               | Decimal numbers range |        |             |
-|                                               | Drop down list |        |             |
-|                                               | Email |        |             |
-|                                               | File |        |             |
-|                                               | Foreign key |        |             |
-|                                               | Function |        |             |
-|                                               | Integer |        |             |
-|                                               | Integers range |        |             |
-|                                               | Multiple choice |        |             |
+|                                               | Drop down list 	|        |             |
+|                                               | Email 			|        |             |
+|                                               | File 				|        |             |
+|                                               | Foreign key 		|        |             |
+|                                               | Function 			|        |             |
+|                                               | Integer 			|        |             |
+|                                               | Integers range 	|        |             |
+|                                               | Multiple choice 	|        |             |
 |                                               | Number of identification |        |             |
 |                                               | Radio buttons list |        |             |
-|                                               | Slug |        |             |
-|                                               | Small text |        |             |
-|                                               | Text |        |             |
+|                                               | Slug 				|        |             |
+|                                               | Small text 		|        |             |
+|                                               | Text 				|        |             |
 |                                               | Update date and time |        |             |
-|                                               | Updated by user |        |             |
-|                                               | Boolean |        |             |
+|                                               | Updated by user 	|        |             |
+|                                               | Boolean 			|        	|             |
 | Field format                                  |               	|        |             |
 | Possible answers                              | Column "Answer identifier" from the spreadsheet tab "Anwsers"  |        |             |
 | Mandatory                                     | Yes/No              |        |             |

@@ -106,16 +106,15 @@ The field configurations columns details are explained in the table bellow.
 
 | Column                                        | Value    | Description |
 | --------------------------------------------- | ----------------- | ----------- |
-|                                               |                   |             |
 | Field label                                   | Free text         |             |
 | Database field name                           | SQL column format |             |
 | Tab                                           | Free text         |             |
 | Group                                         | Free text         |             |
 | Type of field                                 | Dropdown list with the next options:   |             |
-|                                               | Created by user   |             |
-|                                               | Creation date and time |             |
-|                                               | Date              |             |
-|                                               | Date time         |             |
+|                                               | Created by user   | It generates a read-only field which will store the user that created each a table register. |
+|                                               | Creation date and time |  It generates a read-only field which will store the date and time when the table register was created. |
+|                                               | Date              | ![Date field](docs/imgs/django-suit-date.png?raw=true "Screen") |
+|                                               | Date time         | ![Date time field](docs/imgs/django-suit-datetime.png?raw=true "Screen") |
 |                                               | Decimal number    |             |
 |                                               | Decimal numbers range |             |
 |                                               | Drop down list    |             |

@@ -1,4 +1,4 @@
-# Google spreadsheet to Django.
+# Google spreadsheet to django.
 
 The library uses a Google spreadsheet to generates django applications.
 
@@ -9,12 +9,13 @@ The library uses a Google spreadsheet to generates django applications.
 
 ## How to use
 
-1. Create a [Django project](https://docs.djangoproject.com/en/1.8/intro/tutorial01/) and [configure](http://django-suit.readthedocs.org/en/develop/) the [django-suit](http://djangosuit.com/) application.
+1. Create a [django project](https://docs.djangoproject.com/en/1.8/intro/tutorial01/) and [configure](http://django-suit.readthedocs.org/en/develop/) the [django-suit](http://djangosuit.com/) application.
 2. Download and install the library googlespreadsheet2django using the command: python setup.py install
 3. Make a copy of this [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1HWhdkKIHUK-tOEJWEp6gVh3evyV1YipgqV7QeTsUtYI/edit?usp=sharing) and edit the tables and fields of your database.
 4. Configure the document to be shared with everyone with the link (this is necessary for the code generator script to download the file).
 5. Open the terminal and go to the created django project directory.
 6. Use the command: gsheet2django "\<id of the Google spreasheet document\>" to generate the code of your django applications.
+7. Add the new applications to the settings.py file of the django project.
 
 #### The generated code result
 
@@ -84,7 +85,7 @@ On the top of the tab spreadsheet we will configure for which application the ta
 
 ![Table header](docs/imgs/table_header.png?raw=true "Screen")
 
-The fields \<Table singular label\> and \<Table plural label\> are the names of the tables that will be used in the Django admin interface.
+The fields \<Table singular label\> and \<Table plural label\> are the names of the tables that will be used in the django admin interface.
 
 The field \<Data access\> allow us to configure which type of access we will have to this table. Check the available options in the image bellow.
 
@@ -147,3 +148,14 @@ The field configurations columns details are explained in the table bellow.
 | Use on name                                   | Integer                                   |                                       |
 | Unique                                        | Yes/No                                    |                                       |
 | Default value                                 | Free value                                |                                       |
+
+
+#### Choices tab
+
+The choices tab is used to configure the values of the Dropdown lists and Radio buttons lists fields.
+
+![Answers tab](docs/imgs/answers-tab.png?raw=true "Screen")
+
+The value in the "Answer identifier" column should be unique to each set of values, and should respect a python variable format.
+
+![Answers spreadsheet](docs/imgs/answers-spreadsheet.png?raw=true "Screen")

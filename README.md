@@ -135,7 +135,7 @@ The field configurations columns details are explained in the table bellow.
 |                                               | Updated by user                           | Read-only field. Stores the user which made the last update. |
 |                                               | Boolean                                   | ![Boolean field](docs/imgs/django-suit-boolean.png?raw=true "Screen") |
 | Field format                                  | The field will have "Auto generated" value or a dropdown list depending on the "Type of field" column value. |             |
-| Possible answers                              | The field will be empty or a dropdown with the values from the "Answers" tab of the spreadsheet, depending on the "Type of field" column value.|        |
+| Possible answers                              | Empty or a dropdown list. | If the table field is a "Dropdown list" or a "Radio buttons list" a dropdown with the values from the spreadsheet "Answers" tab will be shown. |
 | Mandatory                                     | Yes/No                                    |                                       |
 | Depends on another field's answer             | Dropdown listing the fields of the table. |                          |
 | Show the field when these values are selected | Values separed by ";"                     |                                       |

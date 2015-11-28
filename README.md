@@ -50,6 +50,12 @@ For the template Google spreadsheet it will generates the next files:
 These comments indicate which parts of the code would be replaced when ever you generate a new code based on the spreadsheet. Every code outside these comments would be kept, which means that you can use these files to add extra rules or fields to your application.
 - The static -> js files implement the hide and show rules of the fields vs values.
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 ------------------------------------------------------------------------------
 
 ## The Google spreadsheet format

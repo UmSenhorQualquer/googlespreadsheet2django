@@ -15,7 +15,7 @@ The library uses a Google spreadsheet to generates django applications.
 4. Configure the document to be shared with everyone with the link (this is necessary for the code generator script to download the file).
 5. Open the terminal and go to the created django project directory.
 6. Use the command: gsheet2django "\<id of the Google spreasheet document\>" to generate the code of your django applications.
-7. Add the new applications to the settings.py file of the django project.
+7. Add the new applications to the settings.py file.
 
 #### The generated code result
 

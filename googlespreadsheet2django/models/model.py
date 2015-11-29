@@ -310,11 +310,9 @@ class Model(object):
 			|from django.contrib import admin
 			|from django.conf import settings
 			|from django.db import models
-			|from common.admintools import export_xlsx, printable_html
+			|#from common.admintools import export_xlsx, printable_html
 
 			|class {0}AdminAbstract(admin.ModelAdmin):
-
-			|	change_form_template = 'admin/my_change_form.html'
 
 			|	{2}
 			|	{4}
@@ -324,7 +322,7 @@ class Model(object):
 			|	{9}
 			|	{10}
 
-			|	actions = [export_xlsx,]
+			|	#actions = [export_xlsx,]
 				
 			|	formfield_overrides = dict((
 			|		(models.TextField,dict((( 'widget',Textarea(attrs=dict(rows=5, cols=120,style='width: 600px;') )),) )),
@@ -342,7 +340,7 @@ class Model(object):
 
 			|		user = request.user
 			|		#if not user.groups.filter(name=settings.HTML_EXPORTER_PROFILE_GROUP).exists(): del actions['printable_html']
-			|		if not user.groups.filter(name=settings.EXCEL_EXPORTER_PROFILE_GROUP).exists(): del actions['export_xlsx']
+			|		#if not user.groups.filter(name=settings.EXCEL_EXPORTER_PROFILE_GROUP).exists(): del actions['export_xlsx']
 			|		return actions
 			
 			|	def construct_change_message(self, request, form, formsets):

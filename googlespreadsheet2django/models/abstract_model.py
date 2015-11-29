@@ -19,7 +19,7 @@ class AbstractModel(object):
 	def __str__(self): return self.__unicode__()
 
 	def __strip(self, string):
-		for x in [' ','.','-','_']:
+		for x in [' ','.','-','_',]:#'0','1','2','3','4','5','6','7','8','9']:
 			string = string.replace(x, '')
 		return string
 
@@ -29,8 +29,12 @@ class AbstractModel(object):
 
 	@property
 	def tablename(self): 
-		firstfield = self._fields[0]
-		return firstfield._column.split('_')[0].title()
+		if len(self._group.strip())>0:
+			return "Abstract"+self.__strip(self._group)
+		elif len(self._tab.strip())>0:
+			return "Abstract"+self.__strip(self._tab)
+		else:
+			return "Abstract"+self._fields[0]._column.split('_')[0].title()
 
 	@property
 	def tab(self): 

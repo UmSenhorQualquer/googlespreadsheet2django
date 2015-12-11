@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import os
+
 
 class Field(object):
 	CHOICES_ABBR_LEN = 10 # Number of characters in each answer abbreviation (choice)
@@ -161,7 +163,7 @@ class Field(object):
 			params.append('"%s"' % self.label)
 			params.append( "max_length=255" )
 			upload_path = os.path.join('uploads', self._model.tablename.lower() )
-			params.append( "upload_to=%s" % upload_path )
+			params.append( "upload_to='%s'" % upload_path )
 			
 		elif self._type=='Foreign key':
 			params.append('"%s"' % self._choices)

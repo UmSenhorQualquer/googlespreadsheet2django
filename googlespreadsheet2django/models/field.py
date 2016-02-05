@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import os
 
 class Field(object):
 	CHOICES_ABBR_LEN = 10 # Number of characters in each answer abbreviation (choice)
@@ -129,7 +129,7 @@ class Field(object):
 		if self._type=='Created by user': 
 			params.append('User')
 			params.append('verbose_name="%s"' % self.label)
-			params.append('related_name="created_by_user"')
+			params.append('related_name="{0}_created_by_user"'.format(self.fieldname))
 
 		elif self._type=='Creation date and time':
 			params.append('"%s"' % self.label)
@@ -161,7 +161,7 @@ class Field(object):
 			params.append('"%s"' % self.label)
 			params.append( "max_length=255" )
 			upload_path = os.path.join('uploads', self._model.tablename.lower() )
-			params.append( "upload_to=%s" % upload_path )
+			params.append( "upload_to='{0}'".format(upload_path) )
 			
 		elif self._type=='Foreign key':
 			params.append('"%s"' % self._choices)

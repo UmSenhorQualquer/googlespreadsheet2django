@@ -162,7 +162,6 @@ class Field(object):
 			params.append( "max_length=255" )
 			upload_path = os.path.join('uploads', self._model.tablename.lower() )
 			params.append( "upload_to='{0}'".format(upload_path) )
-			
 		elif self._type=='Foreign key':
 			params.append('"%s"' % self._choices)
 			params.append('verbose_name="%s"' % self._label)

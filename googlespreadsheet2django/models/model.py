@@ -7,11 +7,10 @@ class Model(object):
 	FIELDS_STARTROW = 3
 
 	def __init__(self, modelLoader, name, worksheet, answers):
-		self._modelLoader = modelLoader
-		self._name = name
-		self._answers = answers
-		self._fields = []
-
+		self._modelLoader 	= modelLoader
+		self._name 			= name
+		self._answers 		= answers
+		self._fields 		= []
 		self._application 			= worksheet.cell(0, 0).value.lower()
 		self._verbose_name 			= worksheet.cell(0, 1).value
 		self._verbose_name_plural 	= worksheet.cell(0, 2).value
@@ -30,8 +29,7 @@ class Model(object):
 
 			key = "%s - %s" % (tab, group)
 
-			if key not in self._tables:
-				
+			if key not in self._tables:				
 				abstractModel = AbstractModel(tab, group)
 				self._tables[key] = abstractModel
 				self._orderedTables.append( abstractModel )
@@ -47,7 +45,7 @@ class Model(object):
 	def model_unicode(self):
 		fs = []
 		for f in sorted(self._fields, key=lambda a: a._useonname):
-			if f._useonname: fs.append('str(self.'+f._column+')')
+			if f._useonname: fs.append('force_text(self.'+f._column+')')
 		if len(fs)>0:
 			return """\n\tdef __unicode__(self): return %s\n""" % "+' - '+".join(fs)
 		else:
@@ -57,6 +55,7 @@ class Model(object):
 		res =  "from django.db import models\n"
 		res += "from django.contrib.auth.models import User\n"
 		res += "from django.core.validators import MaxValueValidator, MinValueValidator\n"
+		res += "from django.utils.encoding import force_text\n"
 		#res += '\n'.join(self.foreignModels2Import)
 		res += '\n\n'
 		res += str( self._answers.codeFor(self.answers) )+"\n\n"
@@ -237,7 +236,7 @@ class Model(object):
 
 		readonly_fields = ''
 		if len(self.readonlyFields)>0:
-			readonly_fields = "readonly_fields = (%s,)\n" % ", ".join(self.readonlyFields)
+			readonly_fields = "readonly_fields = (%s,)\n" % ", ".join(list(set(self.readonlyFields)))
 
 		include_tfieldsets = False
 		res = "fieldsets = ["
@@ -343,21 +342,21 @@ class Model(object):
 			|		#if not user.groups.filter(name=settings.EXCEL_EXPORTER_PROFILE_GROUP).exists(): del actions['export_xlsx']
 			|		return actions
 			
-			|	def construct_change_message(self, request, form, formsets):
+			|	def construct_change_message(self, request, form, formsets, add=False):
 			|		message = super({0}AdminAbstract, self).construct_change_message(request, form, formsets)
 			|		change_message = []
 			|		if form.changed_data:
 			|			values = []
 			|			for x in form.changed_data:
 			|				field   = form.fields[x]
-			|				initial = form.initial[x]
+			|				initial = form.initial.get(x,None)				
 			|				value 	= form.cleaned_data[x]
 			|				if isinstance(field, ModelMultipleChoiceField): 
 			|					value 	= [int(y.pk) for y in value]
-			|					initial = [int(y) for y in initial]
+			|					initial = [int(y) for y in initial] if initial!=None else []
 
-			|				values.append( _("<b>%s</b>: <span style='color:#4682B4' >%s</span> -> <span style='color:#00A600' >%s</span>" % (x, str(initial), str(value)) ) )
-			|			change_message.append( '<ul><li>%s</li></ul>' % '</li><li>'.join(values) )
+			|				values.append( _(": %s -> %s" % (str(initial), str(value)) ) )
+			|			change_message.append( '%s' % ','.join(values) )
 			|			message += ' '.join(change_message)
 			|		return message
 

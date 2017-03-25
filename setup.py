@@ -15,7 +15,7 @@ from setuptools import setup
 setup(
 
 	name				='googlespreadsheet2django',
-	version 			='0.0',
+	version 			='1.0.0',
 	description 		="""""",
 	author  			='Ricardo Ribeiro',
 	author_email		='ricardojvr@gmail.com',

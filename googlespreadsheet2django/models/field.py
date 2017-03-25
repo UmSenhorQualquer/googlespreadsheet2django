@@ -125,7 +125,7 @@ class Field(object):
 	@property
 	def parameters(self):
 		params = []
-		
+
 		if self._type=='Created by user': 
 			params.append('User')
 			params.append('verbose_name="%s"' % self.label)

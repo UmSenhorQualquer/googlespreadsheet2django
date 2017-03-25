@@ -47,9 +47,13 @@ class Model(object):
 		for f in sorted(self._fields, key=lambda a: a._useonname):
 			if f._useonname: fs.append('force_text(self.'+f._column+')')
 		if len(fs)>0:
-			return """\n\tdef __unicode__(self): return %s\n""" % "+' - '+".join(fs)
+			return """\n\tdef __unicode__(self): return %s\n\n\tdef __str__(self): return str(self.__unicode__())\n""" % "+' - '+".join(fs)
 		else:
 			return ''
+
+	@property
+	def name(self):
+		return self._name.replace('(', '').replace(')', '')
 
 	def __unicode__(self):
 		res =  "from django.db import models\n"
@@ -63,7 +67,7 @@ class Model(object):
 
 		for model in self._tables.values(): res += "%s\n" % str(model)
 
-		res += '\nclass Abstract%s(%s):' % (self._name, ',\n\t'.join([ model.tablename for model in self._tables.values() ]))
+		res += '\nclass Abstract%s(%s):' % (self.name, ',\n\t'.join([ model.tablename for model in self._tables.values() ]))
 		res += '\n\t%s' % self.model_unicode
 		res += '\n\n\tclass Meta:'
 		res += '\n\t\tabstract = True'
@@ -127,7 +131,7 @@ class Model(object):
 	@property
 	def model(self):
 		res = "##### auto:start:%s #####\n" % self._name
-		res += "from abstractmodels.%s import Abstract%s\n" % (self._name, self._name)
+		res += "from {0}.abstractmodels.{1} import Abstract{1}\n".format(self._application, self._name)
 		res += '\n'
 		res += "class %s(Abstract%s):" % (self._name, self._name)
 		res += '\n\tpass\n'
@@ -137,13 +141,13 @@ class Model(object):
 	@property
 	def modelAdmin(self):
 		res = """##### auto:start:{0} #####
-			from models import {0}
-			from admins.{0}Admin import *
+			from {1}.models import {0}
+			from {1}.admins.{0}Admin import *
 
 			class {0}Admin({0}AdminAbstract):
 				pass
 				
-				##### auto:end:{0} #####\n""".format( self._name)
+				##### auto:end:{0} #####\n""".format( self._name, self._application)
 
 		res = res.replace('\t\t\t', '')
 		return res
@@ -244,7 +248,7 @@ class Model(object):
 			if len(x.fieldsList)==0: continue
 			include_tfieldsets = True
 			fields = "'"+"','".join(x.fieldsList)+"'"
-			res += "\n\t\t('%s',{" % x._group.capitalize()
+			res += "\n\t\t('%s',{" % x._group
 			res += "\n\t\t\t'classes': ('suit-tab suit-tab-%s',)," % x.tab
 			res += "\n\t\t\t'fields': [%s]\n\t\t}" % fields
 			res += "),"

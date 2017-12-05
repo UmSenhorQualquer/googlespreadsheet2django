@@ -229,7 +229,7 @@ class Field(object):
 			params.append('unique=True')
 
 		if self._default!='':
-			default = '"""%s"""' if isinstance(self._default,str) else self._default==1
+			default = '"""%s"""' % self._default if isinstance(self._default, basestring) else self._default==1
 			params.append( 'default={0}'.format(default) )
 		
 		return params
